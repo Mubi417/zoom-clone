@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Clone</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/font-awesome/all.css">
+    <script src="/peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const ROOM_ID = '<%= roomId %>'
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="main-left">
+            <div class="main-videos">
+                <div id="video-grid"> 
+
+                </div>
+            </div>
+            <div class="main-controls">
+                <div class="main-controls-block">
+                    <div class="main-controls-button mic">
+                        <i class="fas fa-microphone"></i>
+                        <span id="mute">Mute</span>
+                    </div>
+                    <div class="main-controls-button video">
+                        <i class="fas fa-video"></i>
+                        <span>Stop Video</span>
+                    </div>
+                </div>
+                <div class="main-controls-block security">
+                    <div class="main-controls-button">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security</span>
+                    </div>
+                    <div class="main-controls-button Participants">
+                        <i class="fas fa-users"></i>
+                        <span>Participants</span>
+                    </div>
+                    <div class="main-controls-button chat">
+                        <i class="far fa-comment-alt"></i>
+                        <span>Chat</span>
+                    </div>
+                </div>
+                <div class="main-controls-block leave">
+                    <div class="main-controls-button">
+                        <span id="leave">Leave Meeting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="main-header">
+                <h4>Chat</h4>
+            </div>
+            <div class="main-chat-window">
+                <ul id="messages">
+
+                </ul>
+            </div>
+            <div class="main-message-container">
+                <form id="chat" action="">
+                    <input id="chat-message" type="text" placeholder="Type Message" autocomplete="off">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>
